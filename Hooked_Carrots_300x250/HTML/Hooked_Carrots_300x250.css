@@ -66,7 +66,7 @@ body a{
 }
 
 .stamp {
-	background: url('hooked-on-veggies.png') no-repeat center;
+	background: url('hooked.png') no-repeat center;
 	background-size: 300%;
     height: 250px;
     opacity: 0;
@@ -74,26 +74,13 @@ body a{
     width: 300px;
 }
 
+.stamp .full {
+	background: url('spritesheet.png') no-repeat 0 -601px;
+	background-size: 845px 489px;
+}
+
 .endframe .stamp {
 	background-position: 155px -7px;
-}
-
-.stamp-frost {
-	background-position: 0 -251px;
-    height: 218px;
-    left: 3px;
-    opacity: 0;
-	position: absolute;
-	top: 18px;
-	width: 294px;
-}
-
-.frost {
-	background-position: -600px 0;
-    height: 250px;
-    opacity: 0;
-	position: absolute;
-	width: 300px;
 }
 
 .text1 {
