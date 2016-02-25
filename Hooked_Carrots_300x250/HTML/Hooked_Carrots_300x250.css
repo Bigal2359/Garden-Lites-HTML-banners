@@ -40,7 +40,7 @@ body a{
 .sprite-sheet {
 	background-image: url('spritesheet.png');
 	background-repeat: no-repeat;
-	background-size: 845px 489px;
+	background-size: 835px 358px;
 }
 
 .img1 {
@@ -62,7 +62,31 @@ body a{
     opacity: 0;
 	position: absolute;
 	top: 50px;
-	width: 300px;
+	width: 208px;
+}
+
+.hov {
+	background-position: 0 -250px;
+    height: 108px;
+    left: 50px;
+    opacity: 0;
+    position: absolute;
+    top: 90px;
+    width: 224px;
+}
+
+.stamp-frame {
+	background: url('stamp-frame.png') no-repeat center;
+	background-size: 315px 239px;
+    height: 250px;
+    opacity: 0;
+    position: absolute;
+    width: 300px;
+}
+
+.build-stamp .hov,
+.build-stamp .stamp-frame {
+	opacity: 1;
 }
 
 .stamp {
@@ -74,17 +98,14 @@ body a{
     width: 300px;
 }
 
-.stamp .full {
-	background: url('spritesheet.png') no-repeat 0 -601px;
-	background-size: 845px 489px;
-}
-
 .endframe .stamp {
-	background-position: 155px -7px;
+	background: url('hooked-on-veggies.png') no-repeat center;
+	left: 72px;
+	top: -84px;
 }
 
 .text1 {
-	background-position: -600px -251px;
+	background-position: -300px -250px;
     height: 67px;
     left: 13px;
     opacity: 0;
@@ -93,8 +114,25 @@ body a{
     width: 235px;
 }
 
+.fresh-carrots {
+	background-position: -691px -275px;
+    height: 15px;
+    left: 91px;
+    position: absolute;
+    top: 25px;
+    width: 137px;
+}
+
+.zucchini {
+	background-position: -600px -300px;
+    height: 16px;
+    position: absolute;
+    top: 50px;
+    width: 67px;
+}
+
 .text2 {
-	background-position: -600px -336px;
+	background-position: -300px -336px;
     height: 23px;
     left: 13px;
     opacity: 0;
@@ -104,7 +142,7 @@ body a{
 }
 
 .text3 {
-	background-position: -600px -376px;
+	background-position: -476px -338px;
     height: 20px;
     left: 162px;
     opacity: 0;
@@ -114,7 +152,7 @@ body a{
 }
 
 .logo {
-	background-position: -789px -422px;
+	background-position: -755px -322px;
     height: 37px;
     left: 235px;
     position: absolute;
@@ -127,12 +165,13 @@ body a{
     background-position: -106px 0px;
     background-repeat: no-repeat;
     background-size: 106px 100%;
+    border-radius: 25px;
     height: 40px;
-    left: 172px;
+    left: 156px;
     overflow: hidden;
     position: absolute;
     top: 142px;
-    width: 106px;
+    width: 128px;
   }
 
 .cta {
