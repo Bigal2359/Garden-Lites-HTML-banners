@@ -12,8 +12,6 @@ var run = {
 	loadSpriteSheet:function(){
 		var loadedImages = 0;
 		var imageArr = [
-			'cta.png',
-			'glow.png',
 			'stamp',
 			'spritesheet.png'
 			
@@ -50,9 +48,6 @@ var run = {
 		$text2 = $('.text2');
 		$text3 = $('.text3');
 		$stamp = $('.stamp');
-		$frame = $('.stamp-frame');
-		$hov = $('.hov');
-		$ctaGlowContainer = $('.cta-glow-container');
 		$cta = $('.cta');
 		$img1 = $('.img1');
 		$packShot = $('.pack-shot');
@@ -63,21 +58,15 @@ var run = {
 	aniOne:function(){
 
 		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'1890px 1428px'}, ease:Linear.easeOut});
-		TweenMax.to($stamp, time - .5, {delay: time + .5, css:{'backgroundSize':'315px 239px'}, ease:Bounce.easeOut});
-		TweenMax.to($stamp, time - .9, {delay: time + .5, alpha:1, ease:Quad.easeOut, onComplete: function(){
-			TweenMax.to($stamp, time - .7, {delay: time, onComplete: run.aniTwo});
-		}});
+		TweenMax.to($stamp, time - .7, {delay: time + .5, css:{'backgroundSize':'315px 239px'}, ease:Back.easeInOut});
+		TweenMax.to($stamp, time - .9, {delay: time + .5, alpha:1, ease:Quad.easeOut, onComplete: run.aniTwo});
 
 	},
 
 	aniTwo:function(){
 
-		$('.container').addClass('build-stamp');
-		$stamp.css({ opacity: 0 });
-		TweenMax.to($hov, time - .5, {css:{'top':'74px','left':'39px'}, ease:Bounce.easeOut});
 		TweenMax.to($img1, time - .5, {delay: time * 2, alpha:0, ease:Quad.easeOut});
-		TweenMax.to($hov, time - .5, {delay: time * 2, alpha:0, ease:Quad.easeOut});
-		TweenMax.to($frame, time - .5, {delay: time * 2, alpha:0, ease:Quad.easeOut, onComplete: run.aniThree});
+		TweenMax.to($stamp, time - .5, {delay: time * 2, alpha:0, ease:Quad.easeOut, onComplete: run.aniThree});
 	},
 
 	aniThree:function(){
@@ -99,14 +88,10 @@ var run = {
 		$('.container').addClass('endframe');
 		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'408px 309px'}, ease:Linear.easeOut});
 		TweenMax.to($text2, time - .5, {alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($stamp, time - .6, {delay: time - .5, css:{'backgroundSize':'136px 103px'}, ease:Bounce.easeOut});
+		TweenMax.to($stamp, time - .7, {delay: time - .5, css:{'backgroundSize':'136px 103px'}, ease:Back.easeInOut});
 		TweenMax.to($stamp, time - .9, {delay: time - .5, alpha:1, ease:Quad.easeOut});
 		TweenMax.to($text3, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($cta, time - .5, {delay: time + 2, css:{'backgroundSize':'126px 40px'}, ease:Bounce.easeOut, onComplete: run.aniCTA});
-	},
-
-	aniCTA:function(){
-		TweenMax.to($ctaGlowContainer, time, {css:{'backgroundPosition':'125px 0'}, ease:Back.easeOut});
+		TweenMax.to($cta, time - .5, {delay: time + 1.5, alpha: 1, ease:Linear.easeOut});
 	}
 
 };
