@@ -91,7 +91,7 @@ var run = {
 		TweenMax.to($stamp, time - .7, {delay: time - .5, css:{'backgroundSize':'136px 103px'}, ease:Back.easeInOut});
 		TweenMax.to($stamp, time - .9, {delay: time - .5, alpha:1, ease:Quad.easeOut});
 		TweenMax.to($text3, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($cta, time - .5, {delay: time + 1.5, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($cta, time - .5, {delay: time + 1, alpha: 1, ease:Linear.easeOut});
 	}
 
 };
