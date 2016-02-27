@@ -75,8 +75,10 @@ body a{
 }
 
 .endframe .stamp {
-	left: 72px;
-	top: -84px;
+    height: 400px;
+	left: 0px;
+	top: -159px;
+    width: 444px;
 }
 
 .text1 {
