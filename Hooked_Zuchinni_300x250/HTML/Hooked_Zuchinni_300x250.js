@@ -12,8 +12,6 @@ var run = {
 	loadSpriteSheet:function(){
 		var loadedImages = 0;
 		var imageArr = [
-			'cta.png',
-			'glow.png',
 			'stamp',
 			'spritesheet.png'
 			
@@ -45,12 +43,11 @@ var run = {
 	setupElements:function(){
 		$click = $('.click');//for ClickTag
 		$text1 = $('.text1');
+		$freshCarrots = $('.fresh-carrots');
+		$zucchini = $('.zucchini');
 		$text2 = $('.text2');
 		$text3 = $('.text3');
 		$stamp = $('.stamp');
-		$stampFrost = $('.stamp-frost');
-		$frost = $('.frost');
-		$ctaGlowContainer = $('.cta-glow-container');
 		$cta = $('.cta');
 		$img1 = $('.img1');
 		$packShot = $('.pack-shot');
@@ -61,43 +58,40 @@ var run = {
 	aniOne:function(){
 
 		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'1890px 1428px'}, ease:Linear.easeOut});
-		TweenMax.to($stamp, time - .8, {delay: time - .5, css:{'backgroundSize':'315px 239px'}, ease:Back.easeInOut});
-		TweenMax.to($stamp, time - .9, {delay: time - .5, alpha:1, ease:Quad.easeOut, onComplete: run.aniTwo});
+		TweenMax.to($stamp, time - .7, {delay: time + .5, css:{'backgroundSize':'315px 239px'}, ease:Back.easeInOut});
+		TweenMax.to($stamp, time - .9, {delay: time + .5, alpha:1, ease:Quad.easeOut, onComplete: run.aniTwo});
 
 	},
 
 	aniTwo:function(){
 
-		TweenMax.to($stampFrost, time * 2, {alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($frost, time * 2, {alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($img1, time - .5, {delay: time * 3, alpha:0, ease:Quad.easeOut});
-		TweenMax.to($stamp, time - .5, {delay: time * 3, alpha:0, ease:Quad.easeOut});
-		TweenMax.to($stampFrost, time - .5, {delay: time * 3, alpha: 0, ease:Linear.easeOut});
-		TweenMax.to($frost, time - .5, {delay: time * 3, alpha: 0, ease:Linear.easeOut, onComplete: run.aniThree});
+		TweenMax.to($img1, time - .5, {delay: time * 2, alpha:0, ease:Quad.easeOut});
+		TweenMax.to($stamp, time - .5, {delay: time * 2, alpha:0, ease:Quad.easeOut, onComplete: run.aniThree});
 	},
 
 	aniThree:function(){
 
 		TweenMax.to($text1, time - .5, {alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($frost, time * 3, {delay: time * 2, alpha: 1, ease:Linear.easeOut, onComplete: run.aniFour});
+		//force3D:true, removes screen tearing and smoothes images
+		TweenMax.to($freshCarrots, time - .7, {delay: time, scale:1.1, force3D:true, ease:Linear.easeOut, onComplete: function(){
+			TweenMax.to($freshCarrots, time - .7, {scale:1, force3D:true, ease:Quad.easeOut});
+		}});
+		TweenMax.to($zucchini, time - .7, {delay: time, scale:1.2, force3D:true, ease:Linear.easeOut, onComplete: function(){
+			TweenMax.to($zucchini, time - .7, {scale:1, force3D:true, ease:Quad.easeOut});
+		}});
+		TweenMax.to($packShot, time - .5, {delay: time + 3, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($text1, time - .5, {delay: time + 3, alpha: 0, ease:Linear.easeOut, onComplete: run.aniFour});
 	},
 
 	aniFour:function(){
 
 		$('.container').addClass('endframe');
-		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'315px 239px'}, ease:Linear.easeOut});
-		TweenMax.to($frost, time - .5, {alpha: 0, ease:Linear.easeOut});
-		TweenMax.to($text1, time - .5, {alpha: 0, ease:Linear.easeOut});
-		TweenMax.to($packShot, time - .5, {alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($text2, time - .5, {delay: time, alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($stamp, time - .8, {delay: time + .5, css:{'backgroundSize':'136px 103px'}, ease:Back.easeInOut});
-		TweenMax.to($stamp, time - .9, {delay: time + .5, alpha:1, ease:Quad.easeOut});
-		TweenMax.to($text3, time - .5, {delay: time + 2, alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($cta, time - .5, {delay: time + 3, css:{'backgroundSize':'126px 40px'}, ease:Back.easeOut, onComplete: run.aniCTA});
-	},
-
-	aniCTA:function(){
-		TweenMax.to($ctaGlowContainer, time, {css:{'backgroundPosition':'106px 0'}, ease:Back.easeOut});
+		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'408px 309px'}, ease:Linear.easeOut});
+		TweenMax.to($text2, time - .5, {alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($stamp, time - .7, {delay: time - .5, css:{'backgroundSize':'136px 103px'}, ease:Back.easeInOut});
+		TweenMax.to($stamp, time - .9, {delay: time - .5, alpha:1, ease:Quad.easeOut});
+		TweenMax.to($text3, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($cta, time - .5, {delay: time + 1, alpha: 1, ease:Linear.easeOut});
 	}
 
 };
