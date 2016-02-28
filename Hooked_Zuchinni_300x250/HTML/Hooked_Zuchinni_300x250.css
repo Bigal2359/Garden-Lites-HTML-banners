@@ -40,7 +40,7 @@ body a{
 .sprite-sheet {
 	background-image: url('spritesheet.png');
 	background-repeat: no-repeat;
-	background-size: 900px 474px;
+	background-size: 807px 322px;
 }
 
 .img1 {
@@ -57,12 +57,12 @@ body a{
 }
 
 .pack-shot {
-	background-position: -300px -251px;
-    height: 250px;
+	background-position: -600px 0;
+    bottom: 0;
+    height: 188px;
     opacity: 0;
 	position: absolute;
-	top: 61px;
-	width: 300px;
+	width: 207px;
 }
 
 .stamp {
@@ -75,30 +75,15 @@ body a{
 }
 
 .endframe .stamp {
-	background-position: 155px -7px;
-}
-
-.stamp-frost {
-	background-position: 0 -251px;
-    height: 218px;
-    left: 3px;
-    opacity: 0;
-	position: absolute;
-	top: 18px;
-	width: 294px;
-}
-
-.frost {
-	background-position: -600px 0;
-    height: 250px;
-    opacity: 0;
-	position: absolute;
-	width: 300px;
+    height: 400px;
+	left: 0px;
+	top: -159px;
+    width: 444px;
 }
 
 .text1 {
-	background-position: -600px -251px;
-    height: 73px;
+	background-position: 0 -250px;
+    height: 72px;
     left: 13px;
     opacity: 0;
     position: absolute;
@@ -106,8 +91,17 @@ body a{
     width: 238px;
 }
 
+.zucchini {
+	background-position: -600px -250px;
+    height: 16px;
+    left: 40px;
+    position: absolute;
+    top: 25px;
+    width: 114px;
+}
+
 .text2 {
-	background-position: -600px -336px;
+	background-position: -300px -250px;
     height: 23px;
     left: 13px;
     opacity: 0;
@@ -117,17 +111,17 @@ body a{
 }
 
 .text3 {
-	background-position: -600px -374px;
-    height: 33px;
+	background-position: -476px -250px;
+    height: 20px;
     left: 162px;
     opacity: 0;
     position: absolute;
     top: 110px;
-    width: 95px;
+    width: 125px;
 }
 
 .logo {
-	background-position: -789px -422px;
+	background-position: -752px -192px;
     height: 37px;
     left: 235px;
     position: absolute;
@@ -140,21 +134,22 @@ body a{
     background-position: -106px 0px;
     background-repeat: no-repeat;
     background-size: 106px 100%;
+    border-radius: 25px;
     height: 40px;
-    left: 172px;
+    left: 156px;
     overflow: hidden;
     position: absolute;
-    top: 152px;
-    width: 96px;
+    top: 142px;
+    width: 128px;
   }
 
 .cta {
-	background: url('cta.png') no-repeat center;
-	background-size: 0 0;
-    height: 63px;
-    left: 120px;
+	background-position: -601px -188px;
+    height: 41px;
+    left: 156px;
+    opacity: 0;
 	position: absolute;
-	top: 140px;
-	width: 200px;
+	top: 142px;
+	width: 127px;
 }
 
