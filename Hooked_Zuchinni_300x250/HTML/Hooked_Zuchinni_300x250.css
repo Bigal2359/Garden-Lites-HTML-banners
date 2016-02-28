@@ -111,13 +111,23 @@ body a{
 }
 
 .text3 {
-	background-position: -476px -250px;
-    height: 20px;
+	background-position: -476px -262px;
+    height: 32px;
     left: 162px;
     opacity: 0;
     position: absolute;
     top: 110px;
-    width: 125px;
+    width: 95px;
+}
+
+.psst {
+    background-position: -476px -250px;
+    height: 8px;
+    left: 162px;
+    opacity: 0;
+    position: absolute;
+    top: 110px;
+    width: 28px;
 }
 
 .logo {
@@ -144,12 +154,12 @@ body a{
   }
 
 .cta {
-	background-position: -601px -188px;
-    height: 41px;
-    left: 156px;
+	background-position: -600px -188px;
+    height: 40px;
+    left: 155px;
     opacity: 0;
 	position: absolute;
-	top: 142px;
-	width: 127px;
+	top: 150px;
+	width: 126px;
 }
 

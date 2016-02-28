@@ -43,10 +43,10 @@ var run = {
 	setupElements:function(){
 		$click = $('.click');//for ClickTag
 		$text1 = $('.text1');
-		$freshCarrots = $('.fresh-carrots');
 		$zucchini = $('.zucchini');
 		$text2 = $('.text2');
 		$text3 = $('.text3');
+		$psst = $('.psst');
 		$stamp = $('.stamp');
 		$cta = $('.cta');
 		$img1 = $('.img1');
@@ -72,10 +72,6 @@ var run = {
 	aniThree:function(){
 
 		TweenMax.to($text1, time - .5, {alpha: 1, ease:Linear.easeOut});
-		//force3D:true, removes screen tearing and smoothes images
-		TweenMax.to($freshCarrots, time - .7, {delay: time, scale:1.1, force3D:true, ease:Linear.easeOut, onComplete: function(){
-			TweenMax.to($freshCarrots, time - .7, {scale:1, force3D:true, ease:Quad.easeOut});
-		}});
 		TweenMax.to($zucchini, time - .7, {delay: time, scale:1.2, force3D:true, ease:Linear.easeOut, onComplete: function(){
 			TweenMax.to($zucchini, time - .7, {scale:1, force3D:true, ease:Quad.easeOut});
 		}});
@@ -90,8 +86,9 @@ var run = {
 		TweenMax.to($text2, time - .5, {alpha: 1, ease:Linear.easeOut});
 		TweenMax.to($stamp, time - .7, {delay: time - .5, css:{'backgroundSize':'136px 103px'}, ease:Back.easeInOut});
 		TweenMax.to($stamp, time - .9, {delay: time - .5, alpha:1, ease:Quad.easeOut});
-		TweenMax.to($text3, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($cta, time - .5, {delay: time + 1, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($psst, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($text3, time - .5, {delay: time + 1, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($cta, time - .5, {delay: time + 1.5, alpha: 1, ease:Linear.easeOut});
 	}
 
 };
