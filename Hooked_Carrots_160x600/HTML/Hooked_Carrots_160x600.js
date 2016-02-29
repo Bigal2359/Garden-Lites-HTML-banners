@@ -50,6 +50,7 @@ var run = {
 		$stamp = $('.stamp');
 		$cta = $('.cta');
 		$img1 = $('.img1');
+		$img2 = $('.img2');
 		$packShot = $('.pack-shot');
 
 		run.aniOne();//Start animation
@@ -58,7 +59,7 @@ var run = {
 	aniOne:function(){
 
 		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'1890px 1428px'}, ease:Linear.easeOut});
-		TweenMax.to($stamp, time - .7, {delay: time + .5, css:{'backgroundSize':'315px 239px'}, ease:Back.easeInOut});
+		TweenMax.to($stamp, time - .7, {delay: time + .5, css:{'backgroundSize':'215px 162px'}, ease:Back.easeInOut});
 		TweenMax.to($stamp, time - .9, {delay: time + .5, alpha:1, ease:Quad.easeOut, onComplete: run.aniTwo});
 
 	},
@@ -79,16 +80,16 @@ var run = {
 		TweenMax.to($zucchini, time - .7, {delay: time, scale:1.2, force3D:true, ease:Linear.easeOut, onComplete: function(){
 			TweenMax.to($zucchini, time - .7, {scale:1, force3D:true, ease:Quad.easeOut});
 		}});
-		TweenMax.to($packShot, time - .5, {delay: time + 3, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($img2, time - .5, {delay: time + 3, alpha: 0, ease:Linear.easeOut});
 		TweenMax.to($text1, time - .5, {delay: time + 3, alpha: 0, ease:Linear.easeOut, onComplete: run.aniFour});
 	},
 
 	aniFour:function(){
 
 		$('.container').addClass('endframe');
-		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'408px 309px'}, ease:Linear.easeOut});
+		TweenMax.to($stamp, time - .5, {css:{'backgroundSize':'1890px 1428px'}, ease:Linear.easeOut});
 		TweenMax.to($text2, time - .5, {alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($stamp, time - .7, {delay: time - .5, css:{'backgroundSize':'136px 103px'}, ease:Back.easeInOut});
+		TweenMax.to($stamp, time - .7, {delay: time - .5, css:{'backgroundSize':'195px 147px'}, ease:Back.easeInOut});
 		TweenMax.to($stamp, time - .9, {delay: time - .5, alpha:1, ease:Quad.easeOut});
 		TweenMax.to($text3, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
 		TweenMax.to($cta, time - .5, {delay: time + 1, alpha: 1, ease:Linear.easeOut});
