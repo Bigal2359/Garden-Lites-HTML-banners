@@ -80,28 +80,20 @@ body a{
 
 .text1 {
 	background-position: -320px 0;
-    height: 86px;
+    height: 91px;
     left: 12px;
     opacity: 0;
     position: absolute;
     top: 135px;
-    width: 142px;
-}
-
-.fresh-carrots {
-	background-position: -320px -152px;
-    height: 14px;
-    position: absolute;
-    top: 49px;
-    width: 117px;
+    width: 144px;
 }
 
 .zucchini {
-	background-position: -320px -178px;
+	background-position: -320px -152px;
     height: 14px;
     position: absolute;
-    top: 74px;
-    width: 58px;
+    top: 48px;
+    width: 97px;
 }
 
 .text2 {
@@ -115,13 +107,13 @@ body a{
 }
 
 .text3 {
-	background-position: -320px -281px;
-    height: 21px;
-    left: 11px;
+	background-position: -320px -276px;
+    height: 33px;
+    left: 32px;
     opacity: 0;
     position: absolute;
-    top: 458px;
-    width: 137px;
+    top: 452px;
+    width: 95px;
 }
 
 .logo {
