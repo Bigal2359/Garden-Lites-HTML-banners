@@ -46,6 +46,7 @@ var run = {
 		$zucchini = $('.zucchini');
 		$text2 = $('.text2');
 		$text3 = $('.text3');
+		$psst = $('.psst');
 		$stamp = $('.stamp');
 		$cta = $('.cta');
 		$img1 = $('.img1');
@@ -87,10 +88,10 @@ var run = {
 		TweenMax.to($text2, time - .5, {alpha: 1, ease:Linear.easeOut});
 		TweenMax.to($stamp, time - .7, {delay: time - .5, css:{'backgroundSize':'195px 147px'}, ease:Back.easeInOut});
 		TweenMax.to($stamp, time - .9, {delay: time - .5, alpha:1, ease:Quad.easeOut});
-		TweenMax.to($text3, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
-		TweenMax.to($cta, time - .5, {delay: time + 1, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($psst, time - .5, {delay: time + .5, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($text3, time - .5, {delay: time + 1, alpha: 1, ease:Linear.easeOut});
+		TweenMax.to($cta, time - .5, {delay: time + 1.5, alpha: 1, ease:Linear.easeOut});
 	}
-
 };
 
 
