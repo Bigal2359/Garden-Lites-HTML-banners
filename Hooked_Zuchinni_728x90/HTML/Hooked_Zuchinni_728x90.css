@@ -47,7 +47,7 @@ body a{
     background-position: 0 -90px;
     height: 90px;
 	position: absolute;
-	width: 504px;
+	width: 561px;
 }
 
 .img2 {
@@ -78,40 +78,50 @@ body a{
 
 .text1 {
 	background-position: -190px -180px;
-    height: 41px;
+    height: 47px;
     left: 173px;
     opacity: 0;
     position: absolute;
     top: 26px;
-    width: 325px;
+    width: 299px;
 }
 
-.fresh-carrots-zucchini {
-	background-position: -190px -254px;
+.fresh-zucchini {
+	background-position: -190px -248px;
     height: 16px;
     position: absolute;
     top: 25px;
-    width: 210px;
+    width: 113px;
 }
 
 .text2 {
-	background-position: -504px -90px;
+	background-position: -561px -90px;
     height: 22px;
-    left: 172px;
+    left: 173px;
     opacity: 0;
     position: absolute;
-    top: 37px;
+    top: 26px;
     width: 137px;
 }
 
 .text3 {
-	background-position: -504px -144px;
-    height: 20px;
+	background-position: -561px -156px;
+    height: 22px;
     left: 507px;
     opacity: 0;
     position: absolute;
     top: 10px;
-    width: 125px;
+    width: 151px;
+}
+
+.psst {
+    background-position: -561px -143px;
+    height: 9px;
+    left: 507px;
+    opacity: 0;
+    position: absolute;
+    top: 10px;
+    width: 29px;
 }
 
 .logo {
