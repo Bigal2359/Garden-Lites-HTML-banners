@@ -97,7 +97,7 @@ body a{
 }
 
 .text2 {
-	background-position: -320px -231px;
+	background-position: -320px -211px;
     height: 19px;
     left: 19px;
     opacity: 0;
@@ -107,23 +107,23 @@ body a{
 }
 
 .text3 {
-	background-position: -320px -276px;
-    height: 33px;
-    left: 32px;
+	background-position: -320px -265px;
+    height: 45px;
+    left: 15px;
     opacity: 0;
     position: absolute;
-    top: 451px;
-    width: 95px;
+    top: 441px;
+    width: 133px;
 }
 
 .psst {
-    background-position: -320px -265px;
-    height: 9px;
-    left: 32px;
+    background-position: -320px -249px;
+    height: 11px;
+    left: 15px;
     opacity: 0;
     position: absolute;
-    top: 452px;
-    width: 28px;
+    top: 441px;
+    width: 39px;
 }
 
 .logo {

@@ -119,13 +119,13 @@ body a{
 }
 
 .text3 {
-	background-position: -476px -250px;
-    height: 20px;
-    left: 162px;
+	background-position: -466px -250px;
+    height: 41px;
+    left: 150px;
     opacity: 0;
     position: absolute;
-    top: 110px;
-    width: 125px;
+    top: 111px;
+    width: 136px;
 }
 
 .logo {
@@ -152,12 +152,12 @@ body a{
   }
 
 .cta {
-	background-position: -601px -188px;
-    height: 41px;
-    left: 156px;
+	background-position: -600px -188px;
+    height: 29px;
+    left: 145px;
     opacity: 0;
 	position: absolute;
-	top: 142px;
-	width: 127px;
+	top: 161px;
+	width: 92px;
 }
 
