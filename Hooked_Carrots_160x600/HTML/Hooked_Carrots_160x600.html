@@ -3,34 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="ad.size" content="width=160,height=600"><!--DOUBLE-CLICK SIZE-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <title>Hooked_Carrots_160x600</title>
-<link rel="stylesheet" href="Hooked_Carrots_160x600.css">
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<style type="text/css" media="screen">
+	@charset "UTF-8"; /* CSS Document */
+	body {
+		background: #FFF;
+		margin: 0;
+		padding: 0;
+	}
+	body a{
+		color: #000;
+		text-decoration: underline;
+	}
+	.container{
+		background-color: #e9e5de;
+		border: 1px solid #115ba1;
+		height: 600px;
+		overflow: hidden;
+		position: relative;
+		width: 160px;
+
+		/*Keeps Border from expanding div*/
+		box-sizing:border-box;
+	    -moz-box-sizing:border-box;
+	    -webkit-box-sizing:border-box;
+	    
+		/*If you are trying to hide absolute positioned elements make sure the container of those
+		  absolute positioned elements is relatively positioned.*/	
+		
+	}
+
+	/*ELEMENTS*/
+	.click {
+		cursor: pointer;
+		height: 600px;
+		overflow: hidden;
+		position: absolute;
+		width: 160px;
+	}
+	.img1 {
+		background: url('carrot-girl.png') no-repeat left bottom;
+		background-size: 100%;
+	    bottom: 0;
+	    height: 452px;
+		position: absolute;
+		width: 160px;
+	}
+	.img2 {
+		background: url('food-display.png') no-repeat;
+		background-size: 160px 97px;
+	    height: 97px;
+	    opacity: 0;
+		position: absolute;
+	    top: 321px;
+		width: 160px;
+	}
+	.pack-shot {
+		background: url('pack-shots.png') no-repeat;
+	    height: 144px;
+	    left: 16px;
+	    opacity: 0;
+		position: absolute;
+		top: 293px;
+		width: 127px;
+	}
+	.stamp {
+		-webkit-animation: stamp-ani 0.1s cubic-bezier(0.64, 0.57, 0.67, 1.53) 1.5s forwards;
+	    animation: stamp-ani 0.1s cubic-bezier(0.64, 0.57, 0.67, 1.53) 1.5s forwards;
+		background: url('hooked-on-veggies.png') no-repeat center 144px;
+		background-size: 300%;
+	    height: 600px;
+	    opacity: 0;
+	    position: absolute;
+	    width: 160px;
+	}
+	@-webkit-keyframes stamp-ani {
+	    0%   { background-size: 300%; opacity: 0; }
+	    100% { background-size: 130%; opacity: 1; }
+	}
+	@keyframes stamp-ani {
+	    0%   { background-size: 300%; opacity: 0; }
+	    100% { background-size: 130%; opacity: 1; }
+	}
+	.text1 {
+		background: url('text1.png') no-repeat;
+	    height: 86px;
+	    left: 12px;
+	    opacity: 0;
+	    position: absolute;
+	    top: 135px;
+	    width: 142px;
+	}
+	.fresh-carrots {
+		background: url('text1.png') no-repeat;
+	    height: 14px;
+	    position: absolute;
+	    top: 49px;
+	    width: 117px;
+	}
+	.zucchini {
+		background: url('text1.png') no-repeat;
+	    height: 14px;
+	    position: absolute;
+	    top: 72px;
+	    width: 57px;
+	}
+	.text2 {
+		background: url('text2.png') no-repeat;
+	    height: 19px;
+	    left: 19px;
+	    opacity: 0;
+	    position: absolute;
+	    top: 125px;
+	    width: 118px;
+	}
+	.text3 {
+		background: url('text3.png') no-repeat;
+	    height: 45px;
+	    left: 11px;
+	    opacity: 0;
+	    position: absolute;
+	    top: 458px;
+	    width: 133px;
+	}
+	.logo {
+		background: url('logo.png') no-repeat;
+	    height: 51px;
+	    left: 41px;
+	    position: absolute;
+	    top: 20px;
+	    width: 77px;
+
+	}
+	.cta {
+		background: url('cta.png') no-repeat;
+	    height: 31px;
+	    left: 31px;
+	    opacity: 0;
+		position: absolute;
+		top: 521px;
+		width: 97px;
+	}
+</style>
 </head>
 
 <body>
-<div class="container">
-
-	<div class="pack-shot sprite-sheet"></div>
-	<div class="img2 sprite-sheet"></div>
-	<div class="img1 sprite-sheet"></div>
-	<div class="text1 sprite-sheet">
-		<div class="fresh-carrots sprite-sheet"></div>
-		<div class="zucchini sprite-sheet"></div>
+	<div class="container">
+		<div class="pack-shot"></div>
+		<div class="img2"></div>
+		<div class="img1"></div>
+		<div class="text1">
+			<div class="fresh-carrots"></div>
+			<div class="zucchini"></div>
+		</div>
+		<div class="text2"></div>
+		<div class="text3"></div>
+		<div class="stamp"></div>
+		<div class="logo"></div>
+		<div class="cta"></div>
+		<a href="#" class="click" target="_new"></a>
 	</div>
-	<div class="text2 sprite-sheet"></div>
-	<div class="text3 sprite-sheet"></div>
-	<div class="stamp"></div>
-	<div class="logo sprite-sheet"></div>
-	<div class="cta sprite-sheet"></div>
-	<div class="cta-glow-container"></div>
+	<script>
+		var clickTag = "";
+		var run = {
 
-	<a href="#" class="click" target="_new"></a>
+			//LOAD IMAGES/SPRITESHEET
+			loadSpriteSheet:function(){
+				var loadedImages = 0;
+				var imageArr = [
+					'carrot-girl.png',
+					'cta.png',
+					'food-display.png',
+					'hooked-on-veggies.png',
+					'logo.png',
+					'pack-shots.png',
+					'text1.png',
+					'text2.png',
+					'text3.png'
+					
+				];
 
-</div>
-<script type="text/javascript" src="jquery-1.8.0.min.js"></script><!--JQUERY-->
-<script type="text/javascript" src="Hooked_Carrots_160x600.js"></script><!--MAIN JS FILE-->
+				preloadImages();
+
+				function preloadImages(){
+					for(var i = 0; i<imageArr.length;i++){
+						var tempImage = new Image();
+						tempImage.src = imageArr[i];
+						tempImage.onload = function (){
+							trackProgress();
+						}
+					}
+				}
+
+				function trackProgress(){
+					loadedImages++;
+					if(loadedImages == imageArr.length){
+						run.setupElements();
+						//console.log('ELEMENTS SET AND LOADED');
+					}
+				}
+
+			},
+
+		};
+	</script>
 </body>
 </html>
