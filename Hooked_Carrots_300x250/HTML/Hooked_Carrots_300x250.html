@@ -15,7 +15,7 @@ body a{
 	text-decoration: underline;
 }
 .container{
-	background-color: #FFF;
+	background-color: #e9e5de;
 	border: 1px solid #115ba1;
 	box-sizing:border-box;
     -moz-box-sizing:border-box;
@@ -33,31 +33,77 @@ body a{
 	position: absolute;
 	width: 300px;
 }
-.sprite-sheet {
-	background-image: url('spritesheet.png');
-	background-repeat: no-repeat;
-	background-size: 828px 316px;
-}
 .img1 {
+	-webkit-animation: img1-ani 15s linear forwards;
+    animation: img1-ani 15s linear forwards;
+	background: url('carrot-girl.png') no-repeat left bottom;
     height: 250px;
 	position: absolute;
 	width: 300px;
+}
+@-webkit-keyframes img1-ani {
+    0% { opacity: 1; }
+    19% { opacity: 1; }
+    22% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes img1-ani {
+    0% { opacity: 1; }
+    19% { opacity: 1; }
+    22% { opacity: 0; }
+    100% { opacity: 0; }
 }
 .img2 {
-	background-position: -300px 0;
+	-webkit-animation: img2-ani 15s linear forwards;
+    animation: img2-ani 15s linear forwards;
+	background: url('food-display.png') no-repeat;
     height: 250px;
 	position: absolute;
+	top: 118px;
 	width: 300px;
 }
+@-webkit-keyframes img2-ani {
+    0% { opacity: 0; }
+    19% { opacity: 0; }
+    22% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes img2-ani {
+    0% { opacity: 0; }
+    19% { opacity: 0; }
+    22% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
 .pack-shot {
-	background-position: -600px 0;
+	-webkit-animation: pack-ani 15s linear forwards;
+    animation: pack-ani 15s linear forwards;
+	background: url('pack-shots.png') no-repeat;
     height: 188px;
+    left: 23px;
     opacity: 0;
 	position: absolute;
-	top: 50px;
+	top: 91px;
 	width: 208px;
 }
+@-webkit-keyframes pack-ani {
+    0% { opacity: 0; }
+    57% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes pack-ani {
+    0% { opacity: 0; }
+    57% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
 .stamp {
+	-webkit-animation: stamp-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+    animation: stamp-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
 	background: url('hooked-on-veggies.png') no-repeat center;
 	background-size: 300%;
     height: 250px;
@@ -65,38 +111,126 @@ body a{
     position: absolute;
     width: 300px;
 }
-.endframe .stamp {
-    height: 400px;
-	left: 0px;
-	top: -159px;
-    width: 444px;
+@-webkit-keyframes stamp-ani {
+    0% { background-size: 1890px 1428px; opacity: 0; height: 250px; top: 0px; width: 300px; }
+    9% { background-size: 1890px 1428px; opacity: 0; height: 250px; top: 0px; width: 300px; }
+    10% { background-size: 315px 239px; opacity: 1; height: 250px; top: 0px; width: 300px; }
+    19% { background-size: 315px 239px; opacity: 1; height: 250px; top: 0px; width: 300px; }
+    22% { background-size: 315px 239px; opacity: 0; height: 250px; top: 0px; width: 300px; }
+    23% { background-size: 408px 309px; opacity: 0; height: 400px; top: -159px; width: 444px; }
+    63% { background-size: 408px 309px; opacity: 0; height: 400px; top: -159px; width: 444px; }
+    64% { background-size: 136px 103px; opacity: 1; height: 400px; top: -159px; width: 444px; }
+    100% { background-size: 136px 103px; opacity: 1; height: 400px; top: -159px; width: 444px; }
+}
+@keyframes stamp-ani {
+    0% { background-size: 1890px 1428px; opacity: 0; height: 250px; top: 0px; width: 300px; }
+    9% { background-size: 1890px 1428px; opacity: 0; height: 250px; top: 0px; width: 300px; }
+    10% { background-size: 315px 239px; opacity: 1; height: 250px; top: 0px; width: 300px; }
+    19% { background-size: 315px 239px; opacity: 1; height: 250px; top: 0px; width: 300px; }
+    22% { background-size: 315px 239px; opacity: 0; height: 250px; top: 0px; width: 300px; }
+    23% { background-size: 408px 309px; opacity: 0; height: 400px; top: -159px; width: 444px; }
+    63% { background-size: 408px 309px; opacity: 0; height: 400px; top: -159px; width: 444px; }
+    64% { background-size: 136px 103px; opacity: 1; height: 400px; top: -159px; width: 444px; }
+    100% { background-size: 136px 103px; opacity: 1; height: 400px; top: -159px; width: 444px; }
 }
 .text1 {
-	background-position: 0 -250px;
+	-webkit-animation: text1-ani 15s linear forwards;
+    animation: text1-ani 15s linear forwards;
     height: 67px;
-    left: 13px;
+    left: 14px;
     opacity: 0;
     position: absolute;
     top: 21px;
     width: 235px;
 }
+.begin {
+	background: url('text1.png') no-repeat;
+    height: 16px;
+    position: absolute;
+    width: 235px;
+}
+.made-with {
+	background: url('text1.png') no-repeat 0 -25px;
+    height: 16px;
+    position: absolute;
+    top: 25px;
+    width: 86px;
+}
 .fresh-carrots {
-	background-position: -691px -275px;
-    height: 15px;
+	-webkit-animation: fresh-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+    animation: fresh-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+	background: url('text1.png') no-repeat -91px -25px;
+    height: 16px;
     left: 91px;
     position: absolute;
     top: 25px;
     width: 137px;
 }
+@-webkit-keyframes fresh-ani {
+    0% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+    28% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+    29% { background-position: -108px -29px; background-size: 282px 79px; height: 17px; left: 85px; top: 20px; width: 141px; }
+    30% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+    100% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+}
+@keyframes fresh-ani {
+    0% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+    28% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+    29% { background-position: -108px -29px; background-size: 282px 79px; height: 17px; left: 85px; top: 20px; width: 141px; }
+    30% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+    100% { background-position: -91px -25px; background-size: 235px 66px; height: 16px; left: 91px; top: 25px; width: 137px; }
+}
 .zucchini {
-	background-position: -600px -300px;
+	-webkit-animation: zucchini-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+    animation: zucchini-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+	background: url('text1.png') no-repeat 0 -50px;
     height: 16px;
     position: absolute;
     top: 50px;
     width: 67px;
 }
+@-webkit-keyframes zucchini-ani {
+    0% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+    28% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+    29% { background-position: 0 -59px; background-size: 282px 79px; height: 19px; left: -7px; top: 49px; width: 82px; }
+    30% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+    100% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+}
+@keyframes zucchini-ani {
+    0% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+    28% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+    29% { background-position: 0 -59px; background-size: 282px 79px; height: 19px; left: -7px; top: 49px; width: 82px; }
+    30% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+    100% { background-position: 0 -50px; background-size: 235px 66px; height: 16px; left: 0; top: 50px; width: 67px; }
+}
+.period {
+	background: url('text1.png') no-repeat -71px -62px;
+    height: 14px;
+    left: 71px;
+    position: absolute;
+    top: 62px;
+    width: 57px;
+}
+@-webkit-keyframes text1-ani {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    28% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes text1-ani {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    28% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
 .text2 {
-	background-position: -300px -250px;
+	-webkit-animation: text2-ani 15s linear forwards;
+    animation: text2-ani 15s linear forwards;
+	background: url('text2.png') no-repeat;
     height: 23px;
     left: 13px;
     opacity: 0;
@@ -104,8 +238,22 @@ body a{
     top: 46px;
     width: 137px;
 }
+@-webkit-keyframes text2-ani {
+    0% { opacity: 0; }
+    60% { opacity: 0; }
+    63% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes text2-ani {
+    0% { opacity: 0; }
+    60% { opacity: 0; }
+    63% { opacity: 1; }
+    100% { opacity: 1; }
+}
 .text3 {
-	background-position: -466px -250px;
+	-webkit-animation: text3-ani 15s linear forwards;
+    animation: text3-ani 15s linear forwards;
+	background: url('text3.png') no-repeat;
     height: 41px;
     left: 150px;
     opacity: 0;
@@ -113,8 +261,20 @@ body a{
     top: 111px;
     width: 136px;
 }
+@-webkit-keyframes text3-ani {
+    0% { opacity: 0; }
+    70% { opacity: 0; }
+    73% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes text3-ani {
+    0% { opacity: 0; }
+    70% { opacity: 0; }
+    73% { opacity: 1; }
+    100% { opacity: 1; }
+}
 .logo {
-	background-position: -752px -192px;
+	background: url('logo.png') no-repeat;
     height: 37px;
     left: 235px;
     position: absolute;
@@ -122,21 +282,10 @@ body a{
     width: 55px;
 
 }
-.cta-glow-container {
-    background-image: url('glow.png');
-    background-position: -106px 0px;
-    background-repeat: no-repeat;
-    background-size: 106px 100%;
-    border-radius: 25px;
-    height: 40px;
-    left: 156px;
-    overflow: hidden;
-    position: absolute;
-    top: 142px;
-    width: 128px;
-  }
 .cta {
-	background-position: -600px -188px;
+	-webkit-animation: cta-ani 15s linear forwards;
+    animation: cta-ani 15s linear forwards;
+	background: url('cta.png') no-repeat;
     height: 29px;
     left: 145px;
     opacity: 0;
@@ -144,23 +293,37 @@ body a{
 	top: 161px;
 	width: 92px;
 }
+@-webkit-keyframes cta-ani {
+    0% { opacity: 0; }
+    73% { opacity: 0; }
+    76% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes cta-ani {
+    0% { opacity: 0; }
+    73% { opacity: 0; }
+    76% { opacity: 1; }
+    100% { opacity: 1; }
+}
 </style>
 </head>
 <body>
 <div class="container">
-	<div class="img2 sprite-sheet"></div>
-	<div class="pack-shot sprite-sheet"></div>
-	<div class="img1 sprite-sheet"></div>
-	<div class="text1 sprite-sheet">
-		<div class="fresh-carrots sprite-sheet"></div>
-		<div class="zucchini sprite-sheet"></div>
+	<div class="img2"></div>
+	<div class="pack-shot"></div>
+	<div class="img1"></div>
+	<div class="text1">
+		<div class="begin"></div>
+		<div class="made-with"></div>
+		<div class="fresh-carrots"></div>
+		<div class="zucchini"></div>
+		<div class="period"></div>
 	</div>
-	<div class="text2 sprite-sheet"></div>
-	<div class="text3 sprite-sheet"></div>
+	<div class="text2"></div>
+	<div class="text3"></div>
 	<div class="stamp"></div>
-	<div class="logo sprite-sheet"></div>
-	<div class="cta sprite-sheet"></div>
-	<div class="cta-glow-container"></div>
+	<div class="logo"></div>
+	<div class="cta"></div>
 	<a href="#" class="click" target="_new"></a>
 </div>
 <script>
