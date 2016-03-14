@@ -4,32 +4,370 @@
 <meta charset="UTF-8">
 <meta name="ad.size" content="width=728,height=90"><!--DOUBLE-CLICK SIZE-->
 <title>Hooked_Zuchinni_728x90</title>
-<link rel="stylesheet" href="Hooked_Zuchinni_728x90.css">
-<!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-</head>
+<style type="text/css" media="screen">
+body {
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+}
+.container{
+	background-color: #e9e5de;
+	border: 1px solid #115ba1;
+	box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+	height: 90px;
+	overflow: hidden;
+	position: relative;
+	width: 728px;
+}
+.click {
+	cursor: pointer;
+	height: 90px;
+	overflow: hidden;
+	position: absolute;
+	width: 728px;
+}
+.img1 {
+    -webkit-animation: img1-ani 15s linear forwards;
+    animation: img1-ani 15s linear forwards;
+	background: url('zuchinni-boy.png') no-repeat right bottom;
+    height: 90px;
+    left: 228px;
+	position: absolute;
+	width: 294px;
+}
+@-webkit-keyframes img1-ani {
+    0% { opacity: 1; }
+    19% { opacity: 1; }
+    22% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes img1-ani {
+    0% { opacity: 1; }
+    19% { opacity: 1; }
+    22% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.img2 {
+	-webkit-animation: img2-ani 15s linear forwards;
+    animation: img2-ani 15s linear forwards;
+	background: url('food-display.png') no-repeat;
+	bottom: 0;
+    height: 86px;
+	position: absolute;
+	width: 190px;
+}
+@-webkit-keyframes img2-ani {
+    0% { opacity: 0; }
+    19% { opacity: 0; }
+    22% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes img2-ani {
+    0% { opacity: 0; }
+    19% { opacity: 0; }
+    22% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.pack-shot {
+	-webkit-animation: pack-ani 15s linear forwards;
+    animation: pack-ani 15s linear forwards;
+	background: url('pack-shots.png') no-repeat;
+    height: 90px;
+    left: 42px;
+    opacity: 0;
+	position: absolute;
+	width: 90px;
+}
+@-webkit-keyframes pack-ani {
+    0% { opacity: 0; }
+    57% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes pack-ani {
+    0% { opacity: 0; }
+    57% { opacity: 0; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+.stamp {
+	-webkit-animation: stamp-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+    animation: stamp-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+	background: url('hooked-on-veggies.png') no-repeat 52% center;
+	background-size: 300%;
+    height: 90px;
+    opacity: 0;
+    position: absolute;
+    width: 728px;
+}
+@-webkit-keyframes stamp-ani {
+    0% { background-size: 1890px 1428px; opacity: 0; }
+    9% { background-size: 1890px 1428px; opacity: 0; }
+    10% { background-size: 258px 195px; opacity: 1; }
+    19% { background-size: 258px 195px; opacity: 1; }
+    22% { background-size: 258px 195px; opacity: 0; }
+    23% { background-size: 408px 309px; opacity: 0; }
+    63% { background-size: 408px 309px; opacity: 0; }
+    64% { background-size: 179px 135px; opacity: 1; }
+    100% { background-size: 179px 135px; opacity: 1; }
+}
+@keyframes stamp-ani {
+    0% { background-size: 1890px 1428px; opacity: 0; }
+    9% { background-size: 1890px 1428px; opacity: 0; }
+    10% { background-size: 258px 196px; opacity: 1; }
+    19% { background-size: 258px 196px; opacity: 1; }
+    22% { background-size: 258px 196px; opacity: 0; }
+    23% { background-size: 408px 309px; opacity: 0; }
+    63% { background-size: 408px 309px; opacity: 0; }
+    64% { background-size: 179px 135px; opacity: 1; }
+    100% { background-size: 179px 135px; opacity: 1; }
+}
+.text1 {
+	-webkit-animation: text1-ani 15s linear forwards;
+    animation: text1-ani 15s linear forwards;
+    height: 47px;
+    left: 173px;
+    opacity: 0;
+    position: absolute;
+    top: 26px;
+    width: 299px;
+}
+.begin {
+	background: url('text1.png') no-repeat -1px 0;
+    height: 22px;
+    position: absolute;
+    width: 278px;
+}
+.zucchini {
+	-webkit-animation: zucchini-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+    animation: zucchini-ani 15s cubic-bezier(0.64, 0.57, 0.67, 1.53) forwards;
+	background: url('text1.png') no-repeat 0 -25px;
+    height: 17px;
+    position: absolute;
+    top: 25px;
+    width: 114px;
+}
+@-webkit-keyframes zucchini-ani {
+    0% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+    28% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+    29% { background-position: 0 -30px; background-size: 360px 56px; height: 20px; left: -11px; top: 24px; width: 137px; }
+    30% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+    100% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+}
+@keyframes zucchini-ani {
+    0% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+    28% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+    29% { background-position: 0 -30px; background-size: 360px 56px; height: 20px; left: -11px; top: 24px; width: 137px; }
+    30% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+    100% { background-position: 0 -25px; background-size: 300px 47px; height: 17px; left: 0; top: 25px; width: 114px; }
+}
+.ending {
+	background: url('text1.png') no-repeat -119px -25px;
+    height: 22px;
+    left: 119px;
+    position: absolute;
+    top: 25px;
+    width: 181px;
+}
+@-webkit-keyframes text1-ani {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    28% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes text1-ani {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    28% { opacity: 1; }
+    54% { opacity: 1; }
+    57% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.text2 {
+	-webkit-animation: text2-ani 15s linear forwards;
+    animation: text2-ani 15s linear forwards;
+	background: url('text2.png') no-repeat;
+    height: 22px;
+    left: 144px;
+    opacity: 0;
+    position: absolute;
+    top: 37px;
+    width: 137px;
+}
+@-webkit-keyframes text2-ani {
+    0% { opacity: 0; }
+    60% { opacity: 0; }
+    63% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes text2-ani {
+    0% { opacity: 0; }
+    60% { opacity: 0; }
+    63% { opacity: 1; }
+    100% { opacity: 1; }
+}
+.text3 {
+	-webkit-animation: text3-ani 15s linear forwards;
+    animation: text3-ani 15s linear forwards;
+    height: 28px;
+    left: 488px;
+    opacity: 0;
+    position: absolute;
+    top: 18px;
+    width: 193px;
+}
+.we-in-the {
+    background: url('text3.png') no-repeat -43px 0;
+    height: 11px;
+    left: 43px;
+    position: absolute;
+    width: 150px;
+}
+.freezer-aisle {
+    background: url('text3.png') no-repeat 0 -16px;
+    height: 11px;
+    position: absolute;
+    top: 16px;
+    width: 192px;
+}
+@-webkit-keyframes text3-ani {
+    0% { opacity: 0; }
+    73% { opacity: 0; }
+    76% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes text3-ani {
+    0% { opacity: 0; }
+    73% { opacity: 0; }
+    76% { opacity: 1; }
+    100% { opacity: 1; }
+}
+.psst {
+    -webkit-animation: psst-ani 15s linear forwards;
+    animation: psst-ani 15s linear forwards;
+    background: url('text3.png') no-repeat;
+    height: 11px;
+    left: 488px;
+    opacity: 0;
+    position: absolute;
+    top: 18px;
+    width: 39px;
+}
+@-webkit-keyframes psst-ani {
+    0% { opacity: 0; }
+    70% { opacity: 0; }
+    73% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes psst-ani {
+    0% { opacity: 0; }
+    70% { opacity: 0; }
+    73% { opacity: 1; }
+    100% { opacity: 1; }
+}
+.logo {
+	background: url('logo.png') no-repeat;
+    height: 36px;
+    left: 666px;
+    position: absolute;
+    top: 46px;
+    width: 54px;
 
+}
+.cta {
+	-webkit-animation: cta-ani 15s linear forwards;
+    animation: cta-ani 15s linear forwards;
+	background: url('cta.png') no-repeat;
+    height: 40px;
+    left: 484px;
+    opacity: 0;
+	position: absolute;
+	top: 52px;
+	width: 126px;
+}
+@-webkit-keyframes cta-ani {
+    0% { opacity: 0; }
+    76% { opacity: 0; }
+    79% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes cta-ani {
+    0% { opacity: 0; }
+    76% { opacity: 0; }
+    79% { opacity: 1; }
+    100% { opacity: 1; }
+}
+</style>
+</head>
 <body>
 <div class="container">
-	
-	<div class="pack-shot sprite-sheet"></div>
-	<div class="img2 sprite-sheet"></div>
-	<div class="img1 sprite-sheet"></div>
-	<div class="text1 sprite-sheet">
-		<div class="fresh-zucchini sprite-sheet"></div>
+	<div class="pack-shot"></div>
+	<div class="img2"></div>
+	<div class="img1"></div>
+	<div class="text1">
+		<div class="begin"></div>
+		<div class="zucchini"></div>
+		<div class="ending"></div>
 	</div>
-	<div class="text2 sprite-sheet"></div>
-	<div class="text3 sprite-sheet"></div>
-	<div class="psst sprite-sheet"></div>
+	<div class="text2"></div>
+	<div class="text3">
+		<div class="we-in-the"></div>
+		<div class="freezer-aisle"></div>
+	</div>
+	<div class="psst"></div>
 	<div class="stamp"></div>
-	<div class="logo sprite-sheet"></div>
-	<div class="cta sprite-sheet"></div>
-
+	<div class="logo"></div>
+	<div class="cta"></div>
 	<a href="#" class="click" target="_new"></a>
-
 </div>
-<script type="text/javascript" src="jquery-1.8.0.min.js"></script><!--JQUERY-->
-<script type="text/javascript" src="Hooked_Zuchinni_728x90.js"></script><!--MAIN JS FILE-->
+<script>
+var clickTag = "";
+var run = {
+
+	//LOAD IMAGES/SPRITESHEET
+	loadSpriteSheet:function(){
+		var loadedImages = 0;
+		var imageArr = [
+			'carrot-girl.png',
+			'cta.png',
+			'food-display.png',
+			'hooked-on-veggies.png',
+			'logo.png',
+			'pack-shots.png',
+			'text1.png',
+			'text2.png',
+			'text3.png'
+			
+		];
+
+		preloadImages();
+
+		function preloadImages(){
+			for(var i = 0; i<imageArr.length;i++){
+				var tempImage = new Image();
+				tempImage.src = imageArr[i];
+				tempImage.onload = function (){
+					trackProgress();
+				}
+			}
+		}
+		function trackProgress(){
+			loadedImages++;
+			if(loadedImages == imageArr.length){
+				run.setupElements();
+				//console.log('ELEMENTS SET AND LOADED');
+			}
+		}
+	},
+};
+</script>
 </body>
 </html>
